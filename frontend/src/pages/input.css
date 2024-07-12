@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+
+.my-body{
+    height: 100vh;
+    background: rgb(132,153,198);
+    background: linear-gradient(149deg, rgba(132,153,198,1) 0%, rgba(37,202,214,1) 45%, rgba(145,142,199,1) 80%);
+}
+
+
+
+.button {
+  @apply bg-rose-700 text-white p-2 text-2xl font-bold rounded-md w-full border-2 border-slate-700 text-center cursor-pointer mt-6 block;
+}
+
+.create_div{
+  @apply w-full h-full p-4 
+
+}
+
+/* li>a{
+  @apply font-semibold text-2xl 
+} */
+
+/* li>a:hover{
+  @apply hover:border-b-red-600 border-b-4 text-gray-600
+} */
+
+/* h1,h2{
+  @apply text-4xl font-bold text-gray-800
+} */
+
+
+.blog{
+  @apply w-full h-full min-w-[300px] min-h-[400px] md:min-h-[20rem]
+}
+
+.card_content>p{
+  @apply pt-2 text-slate-900
+
+}
+
+.card_content>h1,h2,h3{
+  @apply font-bold text-gray-800
+
+}
+.card_content>h2{
+  @apply font-bold text-gray-800 pt-2
+
+}
+
+
+.card_content>ul>li{
+  @apply list-disc list-inside 
+}
+
+.card_content>blockquote{
+  @apply text-blue-600
+}
+
+
+.update_div{
+  @apply absolute container opacity-100 z-30 flex items-center justify-center w-fit h-fit bg-white rounded-md shadow-lg
+}
+
+
