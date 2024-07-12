@@ -11,29 +11,25 @@
     },
     {
       "src": "public/index.js",
-      "use": "@vercel/node"
+      "use": "@vercel/static"  
     }
   ],
   "routes": [
     {
-      "src": "/public/(.*)",
-      "dest": "/public/"
+      "src": "/api/(.*)",          
+      "dest": "/public/index.js"  
     },
     {
       "src": "/static/(.*)",
-      "dest": "/public/static/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/static/$1"
+      "dest": "/public/static/$1" 
     },
     {
       "src": "/(.+)/",
-      "dest": "/public/static/$1/index.html"
+      "dest": "/public/static/$1/index.html"  
     },
     {
       "src": "/(.+)",
-      "dest": "/public/static/$1.html"
+      "dest": "/public/static/$1.html"  
     }
   ]
 }
