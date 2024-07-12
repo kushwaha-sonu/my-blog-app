@@ -8,6 +8,10 @@
     {
       "src": "public/static/**/*.css",
       "use": "@vercel/static"
+    },
+    {
+      "src": "public/index.js",
+      "use": "@vercel/node"
     }
    
   ],
@@ -18,7 +22,7 @@
     },
     {
       "src": "/static/(.*)",
-      "dest": "/public/static/$1" 
+      "dest": "/public/static/$1"
     },
     {
       "src": "/(.+)/",
