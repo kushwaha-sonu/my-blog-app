@@ -2,9 +2,11 @@
   "name": "frontend",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./src/output.css -o ./public/output.css --minify",
+    "copy:static": "copyfiles -u 1 src/**/* public/",
+    "build": "npm run build:css && npm run copy:static"
   },
   "keywords": [],
   "author": "",
