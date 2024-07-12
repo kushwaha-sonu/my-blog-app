@@ -26,16 +26,16 @@ const handleChange = (e) => {
 function handleButtonClick(event) {
   switch (event.target.id) {
     case "register_button":
-      window.location.href = "./register.html";
+      window.location.href = "register.html";
       break;
     case "login_button":
-      window.location.href = "./login.html";
+      window.location.href = "login.html";
       break;
     case "home_button":
-      window.location.href = "./index.html";
+      window.location.href = "index.html";
       break;
     case "logo_button":
-      window.location.href = "./index.html";
+      window.location.href = "index.html";
       break;
     default:
       break;
@@ -62,7 +62,7 @@ const handleRegisterSubmit = (e) => {
     })
     .then((data) => {
       alert(data.message);
-      window.location.href = "./login.html";
+      window.location.href = "./pages/login.html";
     })
     .catch((error) => {
       console.log("Error:", error);
@@ -445,11 +445,11 @@ const handleLogOut = () => {
 };
 
 const handleUserProfile = () => {
-  window.location.href = "../pages/userprofile.html";
+  window.location.href = "./userprofile.html";
 };
 const handleProfileLogOut = () => {
   localStorage.removeItem("token");
-  window.location.href = "../pages/index.html";
+  window.location.href = "./index.html";
 };
 
 const handleProfileCreate = () => {
@@ -758,5 +758,5 @@ const handleUpdateDisplay = (e) => {
 const handleUpdateProfile = (e) => {
   e.preventDefault();
   updateUserProfile(userData);
-  window.location.href = "./userprofile.html";
+  window.location.href = "./pages/userprofile.html";
 };
