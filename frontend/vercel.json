@@ -17,27 +17,11 @@
   "routes": [
     {
       "src": "/static/(.*)",
-      "dest": "/public/static/$1"  
-    },
-    {
-      "src": "/",
-      "dest": "/public/static/index.html" 
-    },
-    {
-      "src": "/(.+)/",
-      "dest": "/public/static/$1/index.html"  
-    },
-    {
-      "src": "/(.+)",
-      "dest": "/public/static/$1.html"  
+      "dest": "/public/static/$1"
     },
     {
       "src": "/static/css/(.*)",
-      "dest": "/public/static/css/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/public/index.js"  
+      "dest": "/public/static/output.css"
     }
   ]
 }
