@@ -13,11 +13,11 @@
   "routes": [
     {
       "src": "/pages/(.*)",
-      "dest": "/src/pages/$1"
+      "dest": "/src/pages/"
     },
     {
       "src": "/script/(.*)",
-      "dest": "/src/script/$1"
+      "dest": "/src/script/"
     }
   ]
 }
