@@ -28,8 +28,12 @@
       "dest": "/public/static/$1"
     },
     {
-      "src": "/(.*)",
-      "dest": "/public/static/output.css"
+      "src": "/(.+)/",
+      "dest": "/public/static/$1/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/public/static/$1.html"
     }
   ]
 }
