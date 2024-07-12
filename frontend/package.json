@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/static/output.css --minify",
-    "copy:static": "cpx \"src/**/*\" public/static/ && cpx index.js public/",
+    "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify",
+    "copy:static": "cpx \"src/**/*\" public/ && cpx index.js public/",
     "build": "npm run build:css && npm run copy:static"
   },
   "keywords": [],
