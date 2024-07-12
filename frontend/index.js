@@ -1,5 +1,5 @@
 let userData = {};
-const baseUrl = "https://my-blog-app-lime.vercel.app/";
+const baseUrl = "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app/";
 
 const right_div = document.getElementById("right_div");
 const createUserBlogDiv = document.getElementById("createBlogDiv");
