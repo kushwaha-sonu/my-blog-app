@@ -32,6 +32,10 @@
       "dest": "/public/static/$1.html"  
     },
     {
+      "src": "/static/css/(.*)",
+      "dest": "/public/static/css/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/public/index.js"  
     }
