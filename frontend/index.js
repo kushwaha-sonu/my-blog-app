@@ -2,6 +2,8 @@ let userData = {};
 const baseUrl = "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app/";
 
 const right_div = document.getElementById("right_div");
+
+
 const createUserBlogDiv = document.getElementById("createBlogDiv");
 const allBlogsDiv = document.getElementById("allBlogsDiv");
 const home_div = document.getElementById("home_div");
