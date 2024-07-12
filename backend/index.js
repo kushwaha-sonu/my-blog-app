@@ -12,9 +12,9 @@ app.use(
   })
 );
 
-const connectDB = require("./helper/dB");
-const blogRoute = require("./routes/blogRoutes");
-const userRoute = require("./routes/userRoutes");
+const connectDB = require("./src/helper/dB");
+const blogRoute = require("./src/routes/blogRoutes");
+const userRoute = require("./src/routes/userRoutes");
 
 app.get("/", (req, res) => {
   res.send("Hello World");
