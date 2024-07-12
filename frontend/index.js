@@ -1,5 +1,5 @@
 let userData = {};
-const baseUrl = "https://my-blog-app-lime.vercel.app/api";
+const baseUrl = "https://my-blog-app-lime.vercel.app";
 
 const right_div = document.getElementById("right_div");
 const createUserBlogDiv = document.getElementById("createBlogDiv");
@@ -50,7 +50,7 @@ if (logo_button) logo_button.addEventListener("click", handleButtonClick);
 
 const handleRegisterSubmit = (e) => {
   e.preventDefault();
-  const response = fetch(`${baseUrl}/register`, {
+  const response = fetch(`${baseUrl}/api/register`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -71,7 +71,7 @@ const handleRegisterSubmit = (e) => {
 
 const handleLoginSubmit = (e) => {
   e.preventDefault();
-  const response = fetch(`${baseUrl}/login`, {
+  const response = fetch(`${baseUrl}/api/login`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -97,7 +97,7 @@ const handleLoginSubmit = (e) => {
 const handleCreateBlog = (e) => {
   e.preventDefault();
   const token = localStorage.getItem("token");
-  const response = fetch(`${baseUrl}/create-blog`, {
+  const response = fetch(`${baseUrl}/api/create-blog`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -119,7 +119,7 @@ const handleCreateBlog = (e) => {
 };
 
 const getAllBlogs = () => {
-  return fetch(`${baseUrl}/get-blogs`, {
+  return fetch(`${baseUrl}/api/get-blogs`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -169,7 +169,7 @@ const displayAllBlogs = () => {
 displayAllBlogs();
 
 const getBlogById = (id) => {
-  return fetch(`${baseUrl}/get-blogs/${id}`, {
+  return fetch(`${baseUrl}/api/get-blogs/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -192,7 +192,7 @@ const getBlogById = (id) => {
 
 
 const getUserBlogById = (id) => {
-  return fetch(`${baseUrl}/get-user-blogs/${id}`, {
+  return fetch(`${baseUrl}/api/get-user-blogs/${id}`, {
     method: "GET",
     headers: {
       "Content-Type": "application/json",
@@ -214,7 +214,7 @@ const getUserBlogById = (id) => {
 };
 
 const deleteBlogById = (id) => {
-  return fetch(`${baseUrl}/delete/${id}`, {
+  return fetch(`${baseUrl}/api/delete/${id}`, {
     method: "DELETE",
     // headers: {
     //   "Content-Type": "application/json",
@@ -239,7 +239,7 @@ const handleUpdate = async (e,id) => {
  
   e.preventDefault();
   const token = localStorage.getItem("token");
-  const response = fetch(`${baseUrl}/update/${id}`, {
+  const response = fetch(`${baseUrl}/api/update/${id}`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -293,7 +293,7 @@ displaySingleBlog();
 
 const getUserByEmail = async (email) => {
   try {
-    const response = await fetch(`${baseUrl}/user`, {
+    const response = await fetch(`${baseUrl}/api/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -315,7 +315,7 @@ const getUserByEmail = async (email) => {
 
 const updateUserProfile = (data) => {
   const token = localStorage.getItem("token");
-  return fetch(`${baseUrl}/user`, {
+  return fetch(`${baseUrl}/api/user`, {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
