@@ -1,5 +1,5 @@
 let userData = {};
-const baseUrl = "http://localhost:4000/api";
+const baseUrl = "https://my-blog-app-lime.vercel.app/api";
 
 const right_div = document.getElementById("right_div");
 const createUserBlogDiv = document.getElementById("createBlogDiv");
