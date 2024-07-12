@@ -24,6 +24,10 @@
       "dest": "/public/static/$1"  
     },
     {
+      "src": "/",
+      "dest": "/public/static/index.html" 
+    },
+    {
       "src": "/(.+)/",
       "dest": "/public/static/$1/index.html"  
     },
