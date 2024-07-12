@@ -7,7 +7,7 @@ const cors = require("cors");
 
 app.use(
   cors({
-    origin: "https://my-blog-app-xscl.vercel.app",
+    origin: "https://my-blog-app-xscl.vercel.app/",
     credentials: true,
   })
 );
