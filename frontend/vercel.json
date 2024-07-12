@@ -12,12 +12,12 @@
   ],
   "routes": [
     {
-      "src": "/pages/(.*)",
-      "dest": "/src/pages/"
+      "src": "src/pages/(.*)",
+      "dest": "src/src/pages/"
     },
     {
-      "src": "/script/(.*)",
-      "dest": "/src/script/"
+      "src": "src/script/(.*)",
+      "dest": "src/src/script/"
     }
   ]
 }
