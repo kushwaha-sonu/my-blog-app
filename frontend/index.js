@@ -54,10 +54,10 @@ const handleRegisterSubmit = (e) => {
   e.preventDefault();
   const response = fetch(`${baseUrl}/api/register`, {
     method: "POST",
-     mode: 'cors',
+    
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+      
     },
     body: JSON.stringify(userData),
   })
@@ -77,10 +77,10 @@ const handleLoginSubmit = (e) => {
   e.preventDefault();
   const response = fetch(`${baseUrl}/api/login`, {
     method: "POST",
-     mode: 'cors',
+ 
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+     
     },
     body: JSON.stringify(userData),
   })
@@ -105,11 +105,11 @@ const handleCreateBlog = (e) => {
   const token = localStorage.getItem("token");
   const response = fetch(`${baseUrl}/api/create-blog`, {
     method: "POST",
-     mode: 'cors',
+  
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+      
     },
     body: JSON.stringify(userData),
   })
@@ -129,10 +129,10 @@ const handleCreateBlog = (e) => {
 const getAllBlogs = () => {
   return fetch(`${baseUrl}/api/get-blogs`, {
     method: "GET",
-     mode: 'cors',
+   
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+    
     },
   })
     .then((res) => res.json())
@@ -181,10 +181,10 @@ displayAllBlogs();
 const getBlogById = (id) => {
   return fetch(`${baseUrl}/api/get-blogs/${id}`, {
     method: "GET",
-     mode: 'cors',
+   
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+      
     },
   })
     .then((res) => {
@@ -206,10 +206,10 @@ const getBlogById = (id) => {
 const getUserBlogById = (id) => {
   return fetch(`${baseUrl}/api/get-user-blogs/${id}`, {
     method: "GET",
-     mode: 'cors',
+   
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+      
     },
   })
     .then((res) => {
@@ -230,10 +230,10 @@ const getUserBlogById = (id) => {
 const deleteBlogById = (id) => {
   return fetch(`${baseUrl}/api/delete/${id}`, {
     method: "DELETE",
-     mode: 'cors',
+   
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+    
     },
   })
     .then((res) => {
@@ -257,11 +257,11 @@ const handleUpdate = async (e,id) => {
   const token = localStorage.getItem("token");
   const response = fetch(`${baseUrl}/api/update/${id}`, {
     method: "PUT",
-     mode: 'cors',
+  
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+     
     },
     body: JSON.stringify(userData),
   })
@@ -313,10 +313,10 @@ const getUserByEmail = async (email) => {
   try {
     const response = await fetch(`${baseUrl}/api/user`, {
       method: "POST",
-       mode: 'cors',
+      
       headers: {
         "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+       
       },
       body: JSON.stringify({ email }),
     });
@@ -337,11 +337,11 @@ const updateUserProfile = (data) => {
   const token = localStorage.getItem("token");
   return fetch(`${baseUrl}/api/user`, {
     method: "PUT",
-     mode: 'cors',
+  
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
-      "Access-Control-Allow-Origin": "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app"
+     
     },
     body: JSON.stringify(data),
   })
