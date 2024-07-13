@@ -6,13 +6,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:css": "npx tailwindcss -i ./src/input.css -o ./public/output.css --minify",
     "copy:static": "cpx \"src/**/*\" public/ && cpx index.js public/",
-    "build": "npm run build:css && npm run copy:static"
+    "build": "npm run build:css && npm run copy:static",
+     "start": "live-server public/"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "cpx": "^1.5.0",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.4",
+     "live-server": "^1.2.1"
   }
 }
