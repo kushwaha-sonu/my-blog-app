@@ -1,5 +1,5 @@
 let userData = {};
-const baseUrl = "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app/";
+const baseUrl = "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app";
 
 const right_div = document.getElementById("right_div");
 
@@ -52,7 +52,7 @@ if (logo_button) logo_button.addEventListener("click", handleButtonClick);
 
 const handleRegisterSubmit = (e) => {
   e.preventDefault();
-  const response = fetch(`${baseUrl}api/register`, {
+  const response = fetch(`${baseUrl}/api/register`, {
     method: "POST",
      mode: 'cors',
     headers: {
@@ -74,7 +74,7 @@ const handleRegisterSubmit = (e) => {
 
 const handleLoginSubmit = (e) => {
   e.preventDefault();
-  const response = fetch(`${baseUrl}api/login`, {
+  const response = fetch(`${baseUrl}/api/login`, {
     method: "POST",
      mode: 'cors',
     headers: {
@@ -101,7 +101,7 @@ const handleLoginSubmit = (e) => {
 const handleCreateBlog = (e) => {
   e.preventDefault();
   const token = localStorage.getItem("token");
-  const response = fetch(`${baseUrl}api/create-blog`, {
+  const response = fetch(`${baseUrl}/api/create-blog`, {
     method: "POST",
      mode: 'cors',
     headers: {
@@ -124,7 +124,7 @@ const handleCreateBlog = (e) => {
 };
 
 const getAllBlogs = () => {
-  return fetch(`${baseUrl}api/get-blogs`, {
+  return fetch(`${baseUrl}/api/get-blogs`, {
     method: "GET",
      mode: 'cors',
     headers: {
@@ -175,7 +175,7 @@ const displayAllBlogs = () => {
 displayAllBlogs();
 
 const getBlogById = (id) => {
-  return fetch(`${baseUrl}api/get-blogs/${id}`, {
+  return fetch(`${baseUrl}/api/get-blogs/${id}`, {
     method: "GET",
      mode: 'cors',
     headers: {
@@ -199,7 +199,7 @@ const getBlogById = (id) => {
 
 
 const getUserBlogById = (id) => {
-  return fetch(`${baseUrl}api/get-user-blogs/${id}`, {
+  return fetch(`${baseUrl}/api/get-user-blogs/${id}`, {
     method: "GET",
      mode: 'cors',
     headers: {
@@ -222,7 +222,7 @@ const getUserBlogById = (id) => {
 };
 
 const deleteBlogById = (id) => {
-  return fetch(`${baseUrl}api/delete/${id}`, {
+  return fetch(`${baseUrl}/api/delete/${id}`, {
     method: "DELETE",
      mode: 'cors',
     // headers: {
@@ -248,7 +248,7 @@ const handleUpdate = async (e,id) => {
  
   e.preventDefault();
   const token = localStorage.getItem("token");
-  const response = fetch(`${baseUrl}api/update/${id}`, {
+  const response = fetch(`${baseUrl}/api/update/${id}`, {
     method: "PUT",
      mode: 'cors',
     headers: {
@@ -303,7 +303,7 @@ displaySingleBlog();
 
 const getUserByEmail = async (email) => {
   try {
-    const response = await fetch(`${baseUrl}api/user`, {
+    const response = await fetch(`${baseUrl}/api/user`, {
       method: "POST",
        mode: 'cors',
       headers: {
@@ -326,7 +326,7 @@ const getUserByEmail = async (email) => {
 
 const updateUserProfile = (data) => {
   const token = localStorage.getItem("token");
-  return fetch(`${baseUrl}api/user`, {
+  return fetch(`${baseUrl}/api/user`, {
     method: "PUT",
      mode: 'cors',
     headers: {
