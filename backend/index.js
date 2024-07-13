@@ -6,7 +6,10 @@ dotenv.config();
 const cors = require("cors");
 
 app.use(
-  cors()
+  cors({
+    origin: "https://my-blog-app-xscl-o1qr0aevx-sonu-kumars-projects-beca3941.vercel.app",
+    credentials: true
+  })
 );
 
 const connectDB = require("./src/helper/dB");
