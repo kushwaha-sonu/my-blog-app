@@ -141,7 +141,7 @@ const getAllBlogs = () => {
 
 const displayAllBlogs = () => {
   getAllBlogs().then((blogs) => {
-    if(!blogs.length)return;
+    if(!blogs)return;
     // console.log(blogs[0].author);
     blogs.forEach((blog) => {
       const blogDiv = document.createElement("div");
