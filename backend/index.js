@@ -12,6 +12,13 @@ app.use(
   })
 );
 
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  next();
+});
+
 const connectDB = require("./src/helper/dB");
 const blogRoute = require("./src/routes/blogRoutes");
 const userRoute = require("./src/routes/userRoutes");
