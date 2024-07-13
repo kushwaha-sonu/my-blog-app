@@ -57,6 +57,7 @@ const handleRegisterSubmit = (e) => {
      mode: 'cors',
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
     body: JSON.stringify(userData),
   })
@@ -79,6 +80,7 @@ const handleLoginSubmit = (e) => {
      mode: 'cors',
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
     body: JSON.stringify(userData),
   })
@@ -107,6 +109,7 @@ const handleCreateBlog = (e) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
     body: JSON.stringify(userData),
   })
@@ -129,6 +132,7 @@ const getAllBlogs = () => {
      mode: 'cors',
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
   })
     .then((res) => res.json())
@@ -180,6 +184,7 @@ const getBlogById = (id) => {
      mode: 'cors',
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
   })
     .then((res) => {
@@ -204,6 +209,7 @@ const getUserBlogById = (id) => {
      mode: 'cors',
     headers: {
       "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
   })
     .then((res) => {
@@ -225,9 +231,10 @@ const deleteBlogById = (id) => {
   return fetch(`${baseUrl}/api/delete/${id}`, {
     method: "DELETE",
      mode: 'cors',
-    // headers: {
-    //   "Content-Type": "application/json",
-    // },
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
+    },
   })
     .then((res) => {
       if (!res.ok) {
@@ -254,6 +261,7 @@ const handleUpdate = async (e,id) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
     body: JSON.stringify(userData),
   })
@@ -308,6 +316,7 @@ const getUserByEmail = async (email) => {
        mode: 'cors',
       headers: {
         "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
       },
       body: JSON.stringify({ email }),
     });
@@ -332,6 +341,7 @@ const updateUserProfile = (data) => {
     headers: {
       "Content-Type": "application/json",
       Authorization: `Bearer ${token}`,
+      "Access-Control-Allow-Origin": "https://my-blog-app-xscl-hyohaj3bw-sonu-kumars-projects-beca3941.vercel.app"
     },
     body: JSON.stringify(data),
   })
