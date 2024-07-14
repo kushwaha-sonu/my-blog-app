@@ -1,5 +1,5 @@
 let userData = {};
-const baseUrl = "https://my-blog-ivrslfvp3-sonu-kumars-projects-beca3941.vercel.app";
+const baseUrl = "https://my-blog-app-o0j9.onrender.com";
 
 const right_div = document.getElementById("right_div");
 
