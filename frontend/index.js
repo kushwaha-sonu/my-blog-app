@@ -66,7 +66,7 @@ const handleRegisterSubmit = (e) => {
     })
     .then((data) => {
       alert(data.message);
-      window.location.href = "./pages/login.html";
+      window.location.href = "./login.html";
     })
     .catch((error) => {
       console.log("Error:", error);
